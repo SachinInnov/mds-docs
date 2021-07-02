@@ -69,6 +69,7 @@ exports.onCreatePage = (
         titleType,
         frontmatter,
         MdxNode,
+        base: 'default'
       },
     });
   }

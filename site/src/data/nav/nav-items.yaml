@@ -1,0 +1,7 @@
+base: default
+menus:
+  - label: Getting started
+    link: /getting-started
+
+  - label: Contributions
+    link: /contributions
