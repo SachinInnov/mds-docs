@@ -1,0 +1,73 @@
+---
+title: Breadcrumb
+description: Breadcrumbs are used to note the path of a record and help the user to navigate back to the parent.
+date: 15 June 2021
+tabs: ['Usage', 'Code', 'Content']
+showMobile: true
+---
+
+Breadcrumbs help users become aware of their current location with respect to the rest of the website or application. By using the page hierarchy, breadcrumbs are easily understood by users, take up very little space on the page, and facilitate discovery. As helpful as they are, breadcrumbs should never replace the main navigation on a page.
+
+Breadcrumbs show the hierarchical progress from the highest entity level to the lowest, one step at a time. This typically starts with the product landing page and goes to the current page or content.
+
+<br />
+
+#### Structure
+
+The breadcrumb component is already a part of the Page Header component in patterns, so you do need to use it individually. However, there is a Default component present which you can use in case of custom requirement.
+
+<br />
+
+#### Configurations
+
+<br />
+
+<Card shadow='none'>
+  <Table
+    showMenu={false}
+    separator={true}
+    data={[
+      {
+        property: 'Max Width',
+        values: '160px',
+        configurable: 'X',
+      },
+      {
+        property: 'Max breadcrumb items',
+        values: '3px',
+        configurable: 'X',
+      },
+    ]}
+    schema={[
+      {
+        name: 'property',
+        displayName: 'Property',
+        width: '33%',
+        sorting: false,
+        separator: true,
+      },
+      {
+        name: 'values',
+        displayName: 'Values',
+        width: '33%',
+        sorting: false,
+        separator: true,
+      },
+      {
+        name: 'configurable',
+        displayName: 'Configurable?',
+        width: '33%',
+        sorting: false,
+        separator: true,
+        cellRenderer: ({ data }) => {
+          return <Icon name='close' appearance='alert' />;
+        },
+      },
+    ]}
+    withHeader={false}
+  />
+</Card>
+
+<br />
+
+#### Types

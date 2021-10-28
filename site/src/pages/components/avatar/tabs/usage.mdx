@@ -1,0 +1,67 @@
+---
+title: Avatar
+description: Avatars are used to identify users.
+date: 15 June 2021
+component: avatar
+tabs: ['Usage', 'Code']
+showMobile: true
+---
+
+An avatar houses an image that represents the user.
+
+<br />
+
+#### Structure
+
+An avatar consists of the display picture of the entity that it represents i.e. a user.
+
+In case a display picture is not available, it consists of a colored background and the initials of the name that it represents. And if somehow the initials can't be fetched, a fallback glyph is used.
+
+<br />
+
+#### Configurations
+
+<br />
+
+<Card shadow='none'>
+  <Table
+    showMenu={false}
+    separator={true}
+    data={[
+      {
+        property: 'Outline',
+        values: '<Color>',
+        configurable: 'Color',
+      },
+      {
+        property: 'Additional number of users',
+        values: '<Count>',
+        configurable: 'Count',
+      },
+    ]}
+    schema={[
+      {
+        name: 'property',
+        displayName: 'Property',
+        width: '33%',
+        sorting: false,
+        separator: true,
+      },
+      {
+        name: 'values',
+        displayName: 'Values',
+        width: '33%',
+        sorting: false,
+        separator: true,
+      },
+      {
+        name: 'configurable',
+        displayName: 'Configurable?',
+        width: '33%',
+        sorting: false,
+        separator: true,
+      },
+    ]}
+    withHeader={false}
+  />
+</Card>
